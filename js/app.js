@@ -3,14 +3,13 @@ let employees = [];
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,
 email, location, phone, dob &noinfo &nat=US`
 const gridContainer = document.querySelector('.grid-container');
-
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalBack = document.querySelector(".modal-back");
 let index;
-
+let employeeNames; 
 
 // fetch data from API
 fetch(urlAPI)
@@ -101,22 +100,43 @@ modalBack.addEventListener('click', () => {
     displayModal(index);
 });
 
-// Search Bar Func
-const searchInput = document.getElementById("searchBar").addEventListener('keyup', function() {
 
-const employeesCard = document.querySelectorAll(".card");
-const user = searchInput.value.toUpperCase();
 
-for (let i = 0; employeesCard.length; i++) {
-    const employeesName = employeesCard[i].querySelector('h2');
-    const name = employeesName.textContent;
 
-    if(name.toUpperCase().indexOf(user) > -1) {
-        employeesCard[i].style.display = "";
-    } else {
-        employeesCard[i].style.display = 'none';
+const searchInput = document.querySelector('#searchBar');
+const employeesCard = document.querySelectorAll('.card');
+const employeesName = document.querySelector('.card h2');
+
+searchInput.addEventListener('keyup', () => {
+    const user = searchInput.value.toUpperCase();
+    for (let i = 0; employeesCard.length; i++) {
+      const name = employeesName.textContent;
+    
+        if(name.toUpperCase().indexOf(user) > -1) {
+            employeesCard[i].style.display = "";
+        } else {
+            employeesCard[i].style.display = 'none';
+        }
     }
-}
 });
 
 
+
+// // Search Bar Func
+// const searchInput = document.querySelector('#searchBar');
+// const employeesName = document.querySelector('.card h2');
+
+// searchInput.addEventListener('keyup', (e) => {
+//     const employeesCard = document.querySelectorAll('.card');
+//     const user = searchInput.value;
+   
+    
+// employeesCard.forEach(employeeCard => {
+//     let employeeName = document.querySelectorAll('.name');
+//         if (employeeName.textContent.includes(user)) {
+//             employeeCard.getElementsByClassName.display = '';
+//         } else {
+//             employeeCard.getElementsByClassName.display = 'none';
+//         }
+//     })
+// })

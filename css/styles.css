@@ -86,3 +86,13 @@ input[type=search] {
     color: #0d0f18;
     text-align: left;
   }
+
+  .modal-next,
+  .modal-back,
+  .modal-close {
+      color: black;
+      background-color: rgb(80, 80, 131);
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid black;
+  }
