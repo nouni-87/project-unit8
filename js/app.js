@@ -104,12 +104,14 @@ modalBack.addEventListener('click', () => {
 
 
 const searchInput = document.querySelector('#searchBar');
-const employeesCard = document.querySelectorAll('.card');
-const employeesName = document.querySelector('.card h2');
+
+//const employeesName = document.querySelector('h2');
 
 searchInput.addEventListener('keyup', () => {
+    const employeesCard = document.querySelectorAll('.card');
     const user = searchInput.value.toUpperCase();
     for (let i = 0; employeesCard.length; i++) {
+        const employeesName = employeesCard[i].querySelector('.name');
       const name = employeesName.textContent;
     
         if(name.toUpperCase().indexOf(user) > -1) {
