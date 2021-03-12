@@ -10,139 +10,33 @@
 
 <body>
 <header>
-    <h1>Awesome Startup Employee Directory</h1>
-    <input type= "search" placeholder="Type a name..." id="searchBar">
+    <div class="head">
+        <h1>Awesome Startup Employee Directory</h1>
+        <div class="input-search">
+        <input type= "search" placeholder="Type a name..." id="searchBar">
+        </div>
+    </div>
+
 </header>
 
 <main class="grid-container">
-    
- <!--<div class="card">
-        <img class="avatar" src="member-1.jpg">
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img class="avatar" src="member-1.jpg" />
-        <div class="text-container">
-            <h2 class="name">Haleigh Macchiarella</h2>
-            <p class="email">dtucker@yakitri.edu</p>
-            <p class="address">Chicago</p>
-        </div>
-    </div> -->
 
 </main>
 
  <div class="overlay hidden">
     <div class="modal">
         <button class="modal-close">X</button>
-        <button class="modal-next">&gt;</button>
-        <button class="modal-back">&lt;</button>
-        <div class="modal-content">
-            <!-- modal information will be added with JS here 
-            <img class="avatar" src="member-1.jpg">
-            <div class="text-container">
-                <h2 class="name">Haleigh Macchiarella</h2>
-                <p class="email">dtucker@yakitri.edu</p>
-                <p class="address">Chicago</p>
-                <hr />
-                <p>(593) 364-3249</p>
-                <p class="address">123 Anywhere St, WV 84814</p>
-                <p>Birthday: 01/04/85</p>-->
-            </div>
+        <button  type="button" id="next-button" aria-label="Next" class="modal-next">
+            <svg width="44" height="60">
+            <polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="black" stroke-linejoin="round"></polyline>
+            </svg>
+        </button>
+        <button  type="button" id="previous-button" aria-label="Previous" class="modal-back">
+            <svg width="44" height="60">
+        <polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="black" stroke-linejoin="round"></polyline>
+            </svg>
+    </button>
+        <div class="modal-content"></div>
         </div>
     </div>
 </div>

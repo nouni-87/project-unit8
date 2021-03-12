@@ -7,13 +7,13 @@ body {
 }
 
 header{
-    padding: 20px 100px;
+    padding: 20px;
 }
 
 h1 {
-  
-    font-size: 20px;
-    height: 40px;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 25px;
 }
 .overlay {
     position: absolute;
@@ -25,13 +25,13 @@ h1 {
 }
          
 .modal {
-    width: 375px;
+    width: 350px;
     margin: 15% auto auto;
     position: relative;
     text-align: center;
     background: #fff;
     border: 1px solid #778;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 30px 20px;
 }
 
@@ -40,17 +40,45 @@ h1 {
     right: 15px;
     top: 5px;
     cursor: pointer;
+    border: 0;
+    border-radius: 15%;
+    background-color: transparent;
+    color: black;
+    transition: background-color .4s ease;
+    font: 1.5em sans-serif;
 }
+  
+.modal-next,
+ .modal-back {
+    display: block;
+    position: absolute;
+    font: 1.6em sans-serif;
+    top: 150px;
+    border: 0;
+    background-color: transparent;
     
+ }
+ 
+.modal-next {
+     right: 20px;
+}
+
+.modal-back {
+    left: 20px;
+  }
+ 
+  
+
 .hidden {
     display: none;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px 100px;
+    padding-right: 20px;
+    padding-left: 15px;
 }
 
 .card {
@@ -74,7 +102,7 @@ h1 {
 
 input[type=search] {
     background-color: #fff;
-    color: rgb(248, 237, 237);
+    color: black;
     padding-left: 1rem;
     width: 332px;
     height: 40px;
@@ -87,12 +115,58 @@ input[type=search] {
     text-align: left;
   }
 
-  .modal-next,
-  .modal-back,
-  .modal-close {
-      color: black;
-      background-color: rgb(80, 80, 131);
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid black;
+ 
+
+  @media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    header {
+        padding: 20px;
+    }
+    .head {
+        display: flex;
+        padding: 5px;
+    }
+
+    h1 {
+        
+        font-size: 16px;
+       padding-right: 30px;
+    }
+    
+    .input-search {
+        padding-left: 16px;
+        margin-left: auto;
+    }
+
+    .modal {
+        width: 500px;
+    }
+
+    }
+
+    
+  @media (min-width: 1024px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        
+        font-size: 20px;
+       
+    }
+
+    .modal {
+        width: 800px;
+    }
+
   }

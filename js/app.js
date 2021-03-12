@@ -101,44 +101,21 @@ modalBack.addEventListener('click', () => {
 });
 
 
-
+// Search bar functionality
 
 const searchInput = document.querySelector('#searchBar');
 
-//const employeesName = document.querySelector('h2');
-
 searchInput.addEventListener('keyup', () => {
-    const employeesCard = document.querySelectorAll('.card');
     const user = searchInput.value.toUpperCase();
-    for (let i = 0; employeesCard.length; i++) {
-        const employeesName = employeesCard[i].querySelector('.name');
-      const name = employeesName.textContent;
-    
-        if(name.toUpperCase().indexOf(user) > -1) {
-            employeesCard[i].style.display = "";
-        } else {
-            employeesCard[i].style.display = 'none';
-        }
-    }
-});
+    const employeesCard = document.querySelectorAll('.card');
+    const employeesName = document.querySelectorAll('h2.name');
+    employeesName.forEach((employeeName, index) => {
+      let name = employeeName.textContent.toUpperCase();
+      if (name.toUpperCase().indexOf(user) > -1) {
+        employeesCard[index].style.display = '';
+      } else {
+        employeesCard[index].style.display = 'none';
+      }
+    });
+  });
 
-
-
-// // Search Bar Func
-// const searchInput = document.querySelector('#searchBar');
-// const employeesName = document.querySelector('.card h2');
-
-// searchInput.addEventListener('keyup', (e) => {
-//     const employeesCard = document.querySelectorAll('.card');
-//     const user = searchInput.value;
-   
-    
-// employeesCard.forEach(employeeCard => {
-//     let employeeName = document.querySelectorAll('.name');
-//         if (employeeName.textContent.includes(user)) {
-//             employeeCard.getElementsByClassName.display = '';
-//         } else {
-//             employeeCard.getElementsByClassName.display = 'none';
-//         }
-//     })
-// })
