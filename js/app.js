@@ -9,7 +9,7 @@ const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalBack = document.querySelector(".modal-back");
 let index;
-let employeeNames; 
+
 
 // fetch data from API
 fetch(urlAPI)
@@ -45,7 +45,7 @@ function displayEmployees(employeeData) {
     }
 
 function displayModal(index) {
-    // use object destructuring make our template literal cleaner
+  // use object destructuring make our template literal cleaner
     let { name, dob, phone, email, location: { city, street, state, postcode
     }, picture } = employees[index];
     let date = new Date(dob.date);
@@ -57,7 +57,7 @@ function displayModal(index) {
     <p class="address">${city}</p>
     <hr />
     <p>${phone}</p>
-    <p class="address">${street.name} ${street.number} ${city}, ${state} ${postcode}</p>
+    <p class="address">${street.number} ${street.name} ${city}, ${state} ${postcode}</p>
     <p>Birthday:
     ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
@@ -83,7 +83,7 @@ modalClose.addEventListener('click', () => {
     });
 
 modalNext.addEventListener('click', () => {
-    if (index <= 12) {
+    if (index <= employees.length) {
         index++;
     } else {
         index = 0;
